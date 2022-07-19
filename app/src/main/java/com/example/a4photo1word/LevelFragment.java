@@ -14,12 +14,12 @@ import android.widget.Button;
 import com.example.a4photo1word.databinding.FragmentLevelBinding;
 
 public class LevelFragment extends Fragment {
-        FragmentLevelBinding binding;
+    FragmentLevelBinding binding;
 
-     @Override
+    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-       binding = FragmentLevelBinding.inflate(getLayoutInflater());
+        binding = FragmentLevelBinding.inflate(getLayoutInflater());
         return binding.getRoot();
     }
 
@@ -48,7 +48,7 @@ public class LevelFragment extends Fragment {
                         .replace(R.id.main_container,gameFragment)
                         .commit();
             }
-       });
+        });
         binding.secondLevelBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -76,20 +76,18 @@ public class LevelFragment extends Fragment {
             public void onClick(View view) {
                 Bundle bundle = new Bundle();
                 bundle.putString("first", "https://avatars.mds.yandex.net/i?id=395f19d274d08acb06a9800f825b7431-4114158-images-thumbs&n=13");
-                bundle.putString("second","https://avatars.mds.yandex.net/i?id=08092f38e18b298974539eecdc014a49-6356264-images-thumbs&n=13" );
+                bundle.putString("second", "https://avatars.mds.yandex.net/i?id=08092f38e18b298974539eecdc014a49-6356264-images-thumbs&n=13");
                 bundle.putString("third", "https://avatars.mds.yandex.net/i?id=91aac43a82b770d81f750a1ab616c24a-5485332-images-thumbs&n=13");
                 bundle.putString("four", "https://avatars.mds.yandex.net/i?id=4651baf36f1c42bf8e921f9a4eec6ccc-5669589-images-thumbs&n=13");
                 bundle.putString("answer", "Зима");
                 bundle.putString("level", "3");
                 bundle.putString("prompt", "Всеми любимая время года");
 
-
-
                 GameFragment gameFragment = new GameFragment();
                 gameFragment.setArguments(bundle);
 
                 requireActivity().getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.main_container,gameFragment)
+                        .replace(R.id.main_container, gameFragment)
                         .commit();
             }
         });

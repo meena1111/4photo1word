@@ -61,6 +61,10 @@ public class GameFragment extends Fragment {
         third = getArguments().getString("third");
         four = getArguments().getString("four");
         answer = getArguments().getString("answer");
+        prompt = getArguments().getString("prompt");
+        level = getArguments().getString("level");
+        textView.setText(level);
+
 
         Glide.with(requireContext()).load(first).into(firstImg);
         Glide.with(requireContext()).load(second).into(secondImg);
@@ -91,17 +95,10 @@ public class GameFragment extends Fragment {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         dialogInterface.dismiss();
-                }
-            });
-            dialog.show();
-        }
-    });
-
-
-
-
-
-
-
+                    }
+                });
+                dialog.show();
+            }
+        });
     }
 }
